@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">Crimson and electric blue cyber dragon</title>
+  <desc id="desc">A neon dragon with animated wings, glowing eyes, and flickering flames on a pure black background.</desc>
+  <defs>
+    <linearGradient id="dragon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF3355"/>
+      <stop offset="0.52" stop-color="#D946EF"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <radialGradient id="aura">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .outline{fill:#080B14;stroke:url(#dragon);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+      .neon{fill:none;stroke:url(#dragon);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .wing{transform-box:fill-box;transform-origin:50% 100%;animation:flap 1.8s ease-in-out infinite alternate}
+      .tail{transform-origin:620px 210px;animation:tail 2.5s ease-in-out infinite alternate}
+      .flame{transform-origin:center bottom;animation:fire .35s ease-in-out infinite alternate}
+      .spark{animation:blink 1.4s ease-in-out infinite alternate}
+      @keyframes flap{from{transform:rotate(-5deg) scaleY(.94)}to{transform:rotate(7deg) scaleY(1.04)}}
+      @keyframes tail{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+      @keyframes fire{from{transform:scale(.88) skewX(-3deg);opacity:.75}to{transform:scale(1.08) skewX(3deg);opacity:1}}
+      @keyframes blink{from{opacity:.25}to{opacity:1}}
+    </style>
+  </defs>
+  <rect width="1000" height="360" rx="18" fill="#000000"/>
+  <ellipse cx="500" cy="200" rx="390" ry="190" fill="url(#aura)"/>
+  <g opacity=".18" stroke="#3B82F6" stroke-width="1">
+    <path d="M0 60H1000M0 120H1000M0 180H1000M0 240H1000M0 300H1000"/>
+    <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360M600 0V360M700 0V360M800 0V360M900 0V360"/>
+  </g>
+  <g class="spark" fill="#FF3355" filter="url(#glow)">
+    <circle cx="150" cy="90" r="3"/><circle cx="820" cy="75" r="2.5"/><circle cx="760" cy="285" r="3"/>
+    <circle cx="235" cy="275" r="2"/><circle cx="880" cy="190" r="2.5"/>
+  </g>
+  <!-- Back wing -->
+  <g class="wing" filter="url(#glow)">
+    <path class="outline" d="M470 178 Q390 92 290 68 Q320 120 300 158 Q360 145 390 205 Q420 185 470 215Z"/>
+    <path class="neon" d="M390 195L326 111M390 195L350 155M390 195L300 158"/>
+  </g>
+  <!-- Front wing -->
+  <g class="wing" filter="url(#glow)" style="animation-delay:-.3s">
+    <path class="outline" d="M530 177 Q585 82 700 58 Q675 112 714 151 Q650 144 618 204 Q578 184 530 218Z"/>
+    <path class="neon" d="M610 195L672 103M610 195L655 153M610 195L714 151"/>
+  </g>
+  <!-- Body and tail -->
+  <g filter="url(#glow)">
+    <path class="neon tail" d="M610 216 Q690 252 755 222 Q788 208 817 226 Q785 251 751 249 Q692 280 621 240"/>
+    <path class="outline" d="M415 202 Q452 166 510 181 Q561 177 607 209 Q632 231 611 252 Q583 276 530 255 L472 241 Q436 236 415 202Z"/>
+    <path class="neon" d="M446 215Q495 233 539 220Q570 215 600 239"/>
+    <path class="outline" d="M425 205 Q390 182 401 153 L430 128 L446 151 L467 137 L477 163 Q468 190 445 207Z"/>
+    <path class="neon" d="M402 155L378 132L414 143M438 132L440 111L455 143"/>
+    <path d="M431 165L447 169" stroke="#FF3355" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="437" cy="163" r="3.5" fill="#60A5FA" filter="url(#glow)"/>
+    <path class="neon" d="M421 184L405 190M438 194L426 205M463 235L451 251M487 245L481 261M550 251L558 266"/>
+  </g>
+  <!-- Flickering blue/red breath -->
+  <g class="flame" filter="url(#glow)">
+    <path d="M400 170 Q367 158 344 170 Q363 172 350 184 Q375 177 394 185Z" fill="#3B82F6" opacity=".95"/>
+    <path d="M393 173 Q369 168 359 174 Q372 176 365 181Z" fill="#FF3355"/>
+  </g>
+  <text x="500" y="322" fill="#D7DEEA" font-family="monospace" font-size="20" letter-spacing="5" text-anchor="middle">CYBER DRAGON // ONLINE</text>
+  <path d="M300 337H700" stroke="url(#dragon)" stroke-width="2" stroke-linecap="round"/>
+</svg>
