@@ -98,6 +98,16 @@ Hi, I'm **Sanka Rajakaruna**, a BSc IT undergraduate at **Rajarata University of
 
 ---
 
+## 🐉 Animated Cyber Dragon
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Sanka139/Sanka139/main/assets/dragon-animation.svg" alt="Animated crimson red and electric blue cyber dragon" width="100%" />
+
+</div>
+
+---
+
 ## 🔴  🔵 Contribution Snake
 
 <div align="center">
